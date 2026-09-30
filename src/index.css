@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  background-color: #040B14;
+}
+
+body {
+  font-family: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  color: #DCEAF2;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B4560;
+  border-radius: 4px;
+}
+
+.font-display {
+  letter-spacing: -0.01em;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.panel {
+  background: linear-gradient(180deg, rgba(20,51,73,0.35) 0%, rgba(10,27,44,0.55) 100%);
+  border: 1px solid rgba(95,200,232,0.12);
+  border-radius: 14px;
+}
+
+.panel-sheen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 35%);
+  pointer-events: none;
+}
+
+/* Leaflet dark tile filter for an ocean-ops look */
+.map-dark-tiles {
+  filter: brightness(0.62) contrast(1.15) saturate(0.35) hue-rotate(180deg) invert(1);
+}
+
+.leaflet-container {
+  background: #071523 !important;
+  font-family: 'Manrope', sans-serif;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: #0A1B2C;
+  color: #DCEAF2;
+  border: 1px solid rgba(95,200,232,0.2);
+}
+
+.leaflet-control-attribution {
+  background: rgba(4,11,20,0.7) !important;
+  color: #5FC8E8 !important;
+}
+.leaflet-control-attribution a {
+  color: #5FC8E8 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
